@@ -57,7 +57,7 @@ public class ConnectFour {
 
             for(int col=0;col<grid.length[0]; col++){
 
-                
+
                 System.out.print(grid[row][col]+"|");
 
                 if(turn%2==0){
@@ -85,7 +85,7 @@ public class ConnectFour {
 
                 for(int row=0;row<grid.length; row++){
                     String check= grid[row][col];
-                    if(check.equals(R)){
+                    if(check.equals("R")){
                         score= score+1;
                     }      
                 }
@@ -94,7 +94,7 @@ public class ConnectFour {
             if(score==4){
                 win= true;
                 gamePlaying=false;
-                return "Player 1 won";
+                return win;
             }
         }
 
@@ -104,7 +104,7 @@ public class ConnectFour {
 
                 for(int row=0;row<grid.length; row++){
                     String check= grid[row][col];
-                    if(check.equals(Y)){
+                    if(check.equals("Y")){
                         score= score+1;
                     }      
                 }
@@ -113,7 +113,7 @@ public class ConnectFour {
             if(score==4){
                 win= true;
                 gamePlaying=false;
-                return "Player 2 won";
+                return win;
             }
         }
 
@@ -122,6 +122,7 @@ public class ConnectFour {
     public boolean checkVertical(String[][] grid){
         boolean win=false;
         int score=0;
+        
 
         if(turn%2==0){
 
@@ -129,7 +130,7 @@ public class ConnectFour {
 
                 for(int col=0;col<grid[0].length; col++){
                     String check= grid[row][col];
-                    if(check.equals(R)){
+                    if(check.equals("R")){
                         score= score+1;
                     }      
                 }
@@ -138,7 +139,7 @@ public class ConnectFour {
             if(score==4){
                 win= true;
                 gamePlaying=false;
-                return "Player 1 won";
+                return win;
             }
         }
 
@@ -148,7 +149,7 @@ public class ConnectFour {
 
                 for(int col=0;col<grid[0].length; col++){
                     String check= grid[row][col];
-                    if(check.equals(Y)){
+                    if(check.equals("Y")){
                         score= score+1;
                     }      
                 }
@@ -157,7 +158,7 @@ public class ConnectFour {
             if(score==4){
                 win= true;
                 gamePlaying=false;
-                return "Player 2 won";
+                return win;
             }
         }
 
